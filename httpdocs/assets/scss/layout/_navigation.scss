@@ -1,0 +1,82 @@
+nav {
+    position: relative;
+
+    .left-nav a, .right-nav a {
+        float: left;
+        display: block;
+        color: #000;
+        text-align: center;
+        padding: 1.4rem 1.6rem;
+        text-decoration: none;
+        font-size: 2rem;
+    }
+
+    .left-nav {
+        overflow: hidden;
+        .hamburger-icon {
+            display: none;
+        }
+        li {
+            background-repeat: no-repeat;
+        }
+        li:nth-of-type(4) {
+            background-image: url("../images/search_icon.png");
+            background-position: 66px 20px;
+        }
+        li:nth-of-type(5) {
+            background-image: url("../images/cart_icon.png");
+            background-position: 55px 20px;
+        }
+        @include respond(tab-port) {
+            //.left-nav a:not(:first-child) {display: none;}
+            li a {
+                display: none;
+            }
+            li a.hamburger-icon {
+                float: left;
+                display: block;
+            }
+            &.responsive {
+                position: relative;
+            }
+            &.responsive .hamburger-icon {
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            &.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+        }
+    }
+
+    .right-nav {
+        @include respond(tab-port) {
+            display: none!important;
+        }
+    }
+
+    .logo {
+        @include respond(tab-port) {
+            float: none;
+            margin: 0 auto;
+            display: inline-block;
+            max-width: 15rem;
+            height: 100%;
+            padding: 0;
+            position: absolute;
+            top: 1.9rem;
+            left: 50%;
+            margin-left: -7.5rem;
+            line-height: normal;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+}

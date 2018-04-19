@@ -1,0 +1,73 @@
+input:not([type]), input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], input[type="color"], textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 0;
+    background-color: #fff;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #ccc;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+    color: rgba(0,0,0,0.75);
+    display: block;
+    font-family: inherit;
+    font-size: .875rem;
+    height: 2.3125rem;
+    margin: 0 0 1rem 0;
+    padding: .5rem;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    transition: border-color .15s linear,background .15s linear;
+}
+#newsletter-email, #contest-email {
+    padding: 2.5rem;
+
+    .newsletter-email-form-wrapper {
+        padding: 0;
+        position: relative;
+        max-width: 600px;
+        margin: 0 auto;
+        &:nth-of-type(2) {
+            margin-left: 20px;
+        }
+        @include respond(tab-port) {
+            &:nth-of-type(2) {
+                margin-left: 0px;
+                margin-top: 20px;
+            }
+        }
+    }
+
+    .email-input, .name-input {
+        padding-right: 0;
+
+        input {
+            height: 50px;
+            padding: 0 19px;
+            margin: 0;
+            font-family: sans-serif;
+            border-radius: 2.88px;
+        }
+
+        @include respond(phone) {
+            input {
+                height: 40px;
+                font-size: 12px;
+            }
+        }
+    }
+
+    .actions {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height:50px;
+        overflow: hidden;
+
+        @include respond(phone) {
+            height: 4.45rem;
+
+        }
+    }
+}

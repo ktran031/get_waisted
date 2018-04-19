@@ -1,0 +1,41 @@
+.container {
+    width: 100%;
+    margin: 0 auto;
+    background-image: url("../images/gw-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    //top: -.6rem;
+    @include respond(phone) {
+
+    }
+    //height: 1000px;
+
+    #contest {
+        padding: 5rem 0;
+        position: relative;
+
+        .contest-img {
+            width: 100%;
+        }
+        
+
+    }
+}
+
+.contest-belt-img {
+    background-image: url("../images/gw-belts.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+    height: 405px;
+    bottom: 213px;
+    left: 60px;
+
+    @include respond(tab-port) {
+        height: 300px;
+        bottom: 0;
+        left: 40px;
+        position: relative;
+    }
+}

@@ -7,10 +7,6 @@
     "dev": "gulp --color",
     "build:prod": "cross-env NODE_ENV=prod gulp production --color"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ktran031/get_waisted.git"
-  },
   "author": "khoi tran",
   "license": "ISC",
   "devDependencies": {

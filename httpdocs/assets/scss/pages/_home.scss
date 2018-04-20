@@ -1,41 +1,101 @@
 .container {
     width: 100%;
     margin: 0 auto;
+    //padding: 0 4rem;
     background-image: url("../images/gw-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    //top: -.6rem;
-    @include respond(phone) {
 
-    }
-    //height: 1000px;
-
+    /* CONTEST SECTION */
     #contest {
-        padding: 5rem 0;
         position: relative;
+        padding: 4rem 0 0 0;
+        .row {
+          max-width: 100%;
+        }
 
         .contest-img {
             width: 100%;
+            position: relative;
         }
-        
+
+      .contest-left {
+        padding: 0 4rem;
+      }
+
+      @include respond(tab-port) {
+        padding-bottom: 0;
+      }
+
+        .contest-belt-img {
+            position: relative;
+            width: 80%;
+            padding-top: 5rem;
+            //padding: 2rem 4rem 0 4rem;
+            @include respond(tab-port) {
+              margin-top: 6rem;
+              width: 75%;
+            }
+            @include respond(small-desktop) {
+              position: absolute;
+              max-width: 50rem;
+              top: 79%;
+              right: 41%;
+              padding-top: 0;
+            }
+            @include respond(big-desktop) {
+              max-width: 65rem;
+              top: 75%;
+              right: 40%;
+            }
+        }
+    }
+
+    /* CUATER SECTION */
+    #cuater {
+        text-align: center;
+        //padding: 6rem 0 6rem;
+        p {
+            padding: 4rem 0;
+        }
+    }
+
+    /* PHOTO GALLERY SECTION */
+    #photo-gallery {
+        padding-bottom: 6rem;
+        img { width: 100%; }
+        @include respond(small-desktop) {
+          padding-top: 10rem;
+        }
+        .gallery-container {
+          padding: 3rem 0;
+          .gw-slick {
+            @include boxShadow();
+          }
+        }
+
+      @include respond(tab-port) {
+        padding-top: 0;
+      }
+
+      // * Slick Slider CSS */
+      .slick-dots {
+        bottom: -50px;
+        li.slick-active button:before {
+          color: $color-black;
+          background-color: $color-black;
+        }
+        li button::before {
+          font-size: 0;
+          width: 10px;
+          height: 10px;
+          border-radius: 12px;
+          border: 1px solid $color-black;
+        }
+      }
 
     }
 }
 
-.contest-belt-img {
-    background-image: url("../images/gw-belts.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: relative;
-    height: 405px;
-    bottom: 213px;
-    left: 60px;
 
-    @include respond(tab-port) {
-        height: 300px;
-        bottom: 0;
-        left: 40px;
-        position: relative;
-    }
-}

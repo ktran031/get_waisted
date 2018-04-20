@@ -10,7 +10,26 @@ $default-font-size: 1.6rem;
 
 
 // GRID
-$grid-width: 140rem;
+$grid-width: 160rem;
 $gutter-vertical: 8rem;
 $gutter-vertical-small: 6rem;
 $gutter-horizontal: 6rem;
+
+
+// MEDIA QUERIES
+$mq-mobile-narrower: "only screen and (max-width : 320px)";
+$mq-mobile-wider: "only screen and (min-width : 320px)";
+
+$mq-tablet-narrower: "only screen and (max-width : 767px)";
+$mq-tablet-wider: "only screen and (min-width : 768px)";
+
+$mq-desktop-narrower: "only screen and (max-width : 1023px)";
+$mq-desktop-wider: "only screen and (min-width : 1024px)";
+
+$mq-large-desktop-narrower: "only screen and (max-width : 1379px)";
+$mq-large-desktop-wider: "only screen and (min-width : 1380px)";
+
+$mq-tablet: "only screen and (min-width : 768px) and (max-width : 1023px)";
+$mq-mobile: "only screen and (min-width : 320px) and (max-width : 480px)";
+
+$mq-btn-fix: "only screen and (min-width : 900px) and (max-width : 1200px)";

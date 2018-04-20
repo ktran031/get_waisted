@@ -3,7 +3,7 @@ button{
     padding: .625rem 1.25rem .6875rem 1.25rem;
     font-size: .6875rem;
 
-    @include respond(phone) {
+    @include respond(tab-port) {
       padding: 0 2.2rem !important;
     }
   }
@@ -37,13 +37,26 @@ button{
   color: #fff;
   transition: background-color 300ms ease-out;
 
-  &.burgundy {
+  &.shop-now {
+    max-width: 33.5rem;
+    height: 6rem;
+    background-color: $color-black;
+    font-size: 1.8rem;
+  }
+
+  &.contest-submit {
     background-color: $color-burgundy;
+    @media #{$mq-btn-fix}{
+      padding: 5px;
+    }
   }
 
   span {
     font-size: 1.2rem;
     font-weight: bold;
+    @media #{$mq-btn-fix}{
+      font-size: .875rem;
+    }
   }
   span>i {
     padding: 0;

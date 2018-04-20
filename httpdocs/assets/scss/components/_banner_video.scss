@@ -1,0 +1,51 @@
+#video-section {
+
+    .video-wrapper {
+        position: relative;
+        padding-top: 6rem;
+        @include respond(tab-port) {
+            padding: 6rem 0 2rem 0;
+        }
+
+        img {
+            width: 100%;
+            @include boxShadow();
+        }
+
+        .play-btn {
+            position: absolute;
+            max-width: 25rem;
+            box-shadow: none;
+
+            &:hover {
+                cursor: pointer;
+                opacity: .7;
+            }
+            @include absCenter();
+            @include respond(tab-port) {
+                max-width: 15rem;
+            }
+        }
+
+        .video-container {
+            padding-bottom: 56.25%;
+            position: relative;
+            padding-top: 30px;
+            overflow: hidden;
+            height: 0;
+        }
+
+        .video-container iframe,
+        .video-container object,
+        .video-container embed {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+        }
+    }
+}
+
+
+

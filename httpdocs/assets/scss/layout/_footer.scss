@@ -1,4 +1,5 @@
 footer {
+  background-color: $color-white;
   .top-footer {
     background: $color-black;
     color: $color-white;
@@ -40,4 +41,9 @@ footer {
       } // li
     } // ul
   } // .footer-social-media
+
+  .bottom-img {
+    width: 100%;
+    height: auto;
+  }
 }

@@ -25,18 +25,30 @@ html {
 
 body {
     box-sizing: border-box;
-    //padding: 3rem;
-
+    background-image: url("../images/gw-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     @include respond(tab-port) {
         padding: 0;
     }
 }
 
-::selection {
-    color: $color-white;
-}
-
 ul, li {
     list-style: none;
+}
+
+img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+section {
+    padding: 4rem 14rem;
+    @include respond(phone) {
+        padding: 4rem;
+    }
+    @include respond(large-desktop) {
+        padding:4rem 20rem ;
+    }
 }
 
